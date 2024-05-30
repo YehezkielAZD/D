@@ -66,28 +66,6 @@ banner() {
     
 }
 
-login() {
-    banner
-    local user="arch"
-    local pass="arch"
-
-    # Jalankan perintah di dalam lingkungan proot-distro
-    proot-distro login archlinux -- bash -c "
-        useradd -m -s /bin/bash ${user}
-        usermod -aG wheel ${user}
-        echo '${user}:${pass}' | chpasswd
-        echo '${user} ALL=(ALL:ALL) NOPASSWD:ALL' >> /etc/sudoers
-    "
-
-    # Buat skrip login
-    echo "proot-distro login --user $user archlinux --bind /dev/null:/proc/sys/kernel/cap_last_last --shared-tmp --fix-low-ports" > /data/data/com.termux/files/usr/bin/al
-    echo "proot-distro login --user $user archlinux --bind /dev/null:/proc/sys/kernel/cap_last_last --shared-tmp --fix-low-ports" > /data/data/com.termux/files/usr/bin/archlinux
-    
-    chmod +x /data/data/com.termux/files/usr/bin/al
-    chmod +x /data/data/com.termux/files/usr/bin/archlinux
-
-  
-}
 
 login
 
