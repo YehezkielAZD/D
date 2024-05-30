@@ -80,7 +80,7 @@ echo -e "${GREEN}╭━━━┳━━━┳━━━┳╮╱╭╮╭╮╱╱
 ╰╯╱╰┻╯╰━┻━━━┻╯╱╰╯╰━━━┻━━┻╯╱╰━┻━━━┻━╯╰━╯"
 echo "##############################################"
 echo ""
-echo "${GREEN}"
+echo ""
 echo "You can now type  archlinux or al  to start ArchLinux"
 echo "你现在可以输入 archlinux or al  启动ArchLinux"
 echo "BY MR.PATRIX"
